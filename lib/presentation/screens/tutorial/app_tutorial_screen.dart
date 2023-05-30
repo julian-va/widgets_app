@@ -40,7 +40,6 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
           endReched = true;
         });
       }
-      print('${pageController.page}');
     });
   }
 

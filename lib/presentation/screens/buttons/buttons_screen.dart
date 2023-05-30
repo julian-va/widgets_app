@@ -6,7 +6,6 @@ class ButtonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: const Text('Button Screen'),
@@ -21,9 +20,7 @@ class ButtonScreen extends StatelessWidget {
 }
 
 class _ButtonsView extends StatelessWidget {
-  const _ButtonsView({
-    super.key,
-  });
+  const _ButtonsView();
 
   @override
   Widget build(BuildContext context) {

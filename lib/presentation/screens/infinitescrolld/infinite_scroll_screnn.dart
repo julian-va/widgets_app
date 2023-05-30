@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,7 +21,6 @@ class _InfiniteScrollSreenState extends State<InfiniteScrollSreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     scrollController.addListener(() {
       if ((scrollController.position.pixels + 500) >=
@@ -66,6 +63,7 @@ class _InfiniteScrollSreenState extends State<InfiniteScrollSreen> {
 
   @override
   void dispose() {
+    super.dispose();
     isMounted = false;
     scrollController.dispose();
   }

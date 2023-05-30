@@ -18,7 +18,6 @@ class SnackBars extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: const Text('Snackbars y Dialogos'),
@@ -27,12 +26,13 @@ class SnackBars extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FilledButton.tonal(onPressed: () {
-              showAboutDialog(context: context);
-            }, child: Text('Licencias usadas')),
-            FilledButton.tonal(onPressed: () {
-
-            }, child: Text('Mostrar Dialogos'))
+            FilledButton.tonal(
+                onPressed: () {
+                  showAboutDialog(context: context);
+                },
+                child: const Text('Licencias usadas')),
+            FilledButton.tonal(
+                onPressed: () {}, child: const Text('Mostrar Dialogos'))
           ],
         ),
       ),

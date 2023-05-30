@@ -5,7 +5,6 @@ class ProgressScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: const Text('Progress Indicators'),
@@ -18,10 +17,9 @@ class ProgressScreen extends StatelessWidget {
 class _ProgressView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Center(
       child: Column(
-        children:  [
+        children: [
           const SizedBox(height: 30),
           const Text('Circular Progress indicator'),
           const SizedBox(height: 30),
@@ -42,24 +40,29 @@ class _ProgressView extends StatelessWidget {
 class _ControllerProgresIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return StreamBuilder<double>(
-      stream: Stream.periodic(const Duration(milliseconds: 300),(values){
-return (values *2)/100;
-      }).takeWhile((values) => values<100),
-      builder: (context, snapshot) {
-        final progressValue = snapshot.data??0;
-        return Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircularProgressIndicator(value: progressValue, strokeWidth: 2,backgroundColor: Colors.black12,),
-              const SizedBox( width: 20,),
-              Expanded(child: LinearProgressIndicator(value: progressValue)),
-            ],
-        ),
-        );
-      }
-    );
+        stream: Stream.periodic(const Duration(milliseconds: 300), (values) {
+          return (values * 2) / 100;
+        }).takeWhile((values) => values < 100),
+        builder: (context, snapshot) {
+          final progressValue = snapshot.data ?? 0;
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(
+                  value: progressValue,
+                  strokeWidth: 2,
+                  backgroundColor: Colors.black12,
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Expanded(child: LinearProgressIndicator(value: progressValue)),
+              ],
+            ),
+          );
+        });
   }
 }

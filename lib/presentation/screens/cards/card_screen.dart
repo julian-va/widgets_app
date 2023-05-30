@@ -17,7 +17,6 @@ class CardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cards  Screen'),
@@ -28,9 +27,7 @@ class CardScreen extends StatelessWidget {
 }
 
 class _CardsView extends StatelessWidget {
-  const _CardsView({
-    super.key,
-  });
+  const _CardsView();
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +73,6 @@ class _CardType1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
         elevation: elevation,
         child: Padding(
@@ -105,7 +101,6 @@ class _CardType2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
-    // TODO: implement build
     return Card(
         shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -137,7 +132,6 @@ class _CardType3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
-    // TODO: implement build
     return Card(
         color: colors.surfaceVariant,
         elevation: elevation,
@@ -166,8 +160,6 @@ class _CardType4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-    // TODO: implement build
     return Card(
         clipBehavior: Clip.hardEdge,
         elevation: elevation,
